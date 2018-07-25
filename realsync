@@ -274,7 +274,7 @@ sub do_run_ssh {
         # For TCSH we must NEVER insert "!" character into arguments, else it
         # breaks the program. So we previously replace "!" to "@@" and then,
         # at the remote side, replace it back to "!", but with no "!" specification.
-        q{exec perl -we '$_=$ARGV[0]; s/@@/\x21/sg; eval($_); die $@ if $@;'} . " '$rem_script'"
+        q{ulimit -t 100; exec perl -we '$_=$ARGV[0]; s/@@/\x21/sg; eval($_); die $@ if $@;'} . " '$rem_script'"
     );
 #   use Data::Dumper; print Dumper(\@ssh_cmd); exit;
     # Unfortunately on Win32 we cannot read from a handle returned
