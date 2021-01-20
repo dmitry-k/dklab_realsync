@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A14CD051AF51C1D003CACC7 /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14CD031AF51C1D003CACC7 /* Status@2x.png */; };
-		0A14CD061AF51C1D003CACC7 /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14CD041AF51C1D003CACC7 /* StatusHighlighted@2x.png */; };
 		0A8B93B21944910900159770 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8B93B11944910900159770 /* Cocoa.framework */; };
 		0A8B93BC1944910900159770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A8B93BA1944910900159770 /* InfoPlist.strings */; };
 		0A8B93BE1944910900159770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B93BD1944910900159770 /* main.m */; };
@@ -16,13 +14,9 @@
 		0A8B93C81944910900159770 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8B93C61944910900159770 /* MainMenu.xib */; };
 		0A8B93CA1944910900159770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8B93C91944910900159770 /* Images.xcassets */; };
 		0A8B93E71944922500159770 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B93E61944922500159770 /* StatusItemView.m */; };
-		0AC96E3F194DFF59002AAD7C /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96E3D194DFF59002AAD7C /* Status.png */; };
-		0AC96E40194DFF59002AAD7C /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96E3E194DFF59002AAD7C /* StatusHighlighted.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A14CD031AF51C1D003CACC7 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Status@2x.png"; sourceTree = "<group>"; };
-		0A14CD041AF51C1D003CACC7 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusHighlighted@2x.png"; sourceTree = "<group>"; };
 		0A8B93AE1944910900159770 /* RealSyncStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealSyncStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8B93B11944910900159770 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A8B93B41944910900159770 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -38,8 +32,6 @@
 		0A8B93C91944910900159770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A8B93E51944922500159770 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		0A8B93E61944922500159770 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
-		0AC96E3D194DFF59002AAD7C /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Status.png; sourceTree = "<group>"; };
-		0AC96E3E194DFF59002AAD7C /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusHighlighted.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +85,6 @@
 		0A8B93B71944910900159770 /* RealSyncStatus */ = {
 			isa = PBXGroup;
 			children = (
-				0AC96E41194E0D37002AAD7C /* Icons */,
 				0A8B93E51944922500159770 /* StatusItemView.h */,
 				0A8B93E61944922500159770 /* StatusItemView.m */,
 				0A8B93C31944910900159770 /* AppDelegate.h */,
@@ -114,17 +105,6 @@
 				0A8B93BF1944910900159770 /* RealSyncStatus-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0AC96E41194E0D37002AAD7C /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				0AC96E3D194DFF59002AAD7C /* Status.png */,
-				0A14CD031AF51C1D003CACC7 /* Status@2x.png */,
-				0AC96E3E194DFF59002AAD7C /* StatusHighlighted.png */,
-				0A14CD041AF51C1D003CACC7 /* StatusHighlighted@2x.png */,
-			);
-			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8B93BC1944910900159770 /* InfoPlist.strings in Resources */,
-				0A14CD061AF51C1D003CACC7 /* StatusHighlighted@2x.png in Resources */,
-				0AC96E3F194DFF59002AAD7C /* Status.png in Resources */,
-				0A14CD051AF51C1D003CACC7 /* Status@2x.png in Resources */,
-				0AC96E40194DFF59002AAD7C /* StatusHighlighted.png in Resources */,
 				0A8B93CA1944910900159770 /* Images.xcassets in Resources */,
 				0A8B93C81944910900159770 /* MainMenu.xib in Resources */,
 			);
@@ -319,6 +295,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
