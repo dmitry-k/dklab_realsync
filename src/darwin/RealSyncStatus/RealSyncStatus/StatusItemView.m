@@ -12,8 +12,6 @@
 @synthesize statusItem = _statusItem;
 @synthesize image = _image;
 
-int realsyncTerminalWindowPid = 0;
-
 - (id)initWithStatusItem:(NSStatusItem *)statusItem
 {
     CGFloat itemWidth = [statusItem length];
@@ -24,22 +22,8 @@ int realsyncTerminalWindowPid = 0;
     if (self != nil) {
         _statusItem = statusItem;
         _statusItem.view = self;
-        
-        realsyncTerminalWindowPid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"terminalpid"] intValue];
-        
-        [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-                                                            selector:@selector(onNotify:)
-                                                                name:@"RealSync.notification.windowPid"
-                                                              object:nil
-                                                  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
     }
     return self;
-}
-
-- (void)onNotify:(NSNotification *)note
-{
-    NSString *object = [note object];
-    realsyncTerminalWindowPid = [object intValue];
 }
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -64,20 +48,5 @@ int realsyncTerminalWindowPid = 0;
     }
 }
 
-- (void)mouseDown:(NSEvent *)theEvent
-{
-    if (realsyncTerminalWindowPid == 0) {
-        return;
-    }
-    
-    NSRunningApplication *app = [NSRunningApplication runningApplicationWithProcessIdentifier:realsyncTerminalWindowPid];
-    
-    if (app.hidden) {
-        [app activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-        [app unhide];
-    } else {
-        [app hide];
-    }
-}
 
 @end
